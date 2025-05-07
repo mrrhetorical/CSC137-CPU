@@ -316,7 +316,7 @@ c08 840 840 840 880 880 880 d00
       <a name="select" val="3"/>
       <a name="selloc" val="tr"/>
     </comp>
-    <comp lib="8" loc="(117,274)" name="Text">
+    <comp lib="8" loc="(115,270)" name="Text">
       <a name="text" val="Ground for reset"/>
     </comp>
     <comp loc="(1030,230)" name="twelveBitRegister">
@@ -699,6 +699,38 @@ c08 840 840 840 880 880 880 d00
       <a name="label" val="V"/>
       <a name="output" val="true"/>
     </comp>
+    <comp lib="0" loc="(1490,300)" name="Power"/>
+    <comp lib="0" loc="(1490,440)" name="Ground"/>
+    <comp lib="0" loc="(1530,300)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+    </comp>
+    <comp lib="0" loc="(1570,150)" name="Power"/>
+    <comp lib="0" loc="(1570,190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(1590,250)" name="Ground">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(1650,460)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="Reset"/>
+    </comp>
+    <comp lib="0" loc="(1710,440)" name="Ground">
+      <a name="width" val="12"/>
+    </comp>
+    <comp lib="0" loc="(1750,60)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="9"/>
+      <a name="incoming" val="9"/>
+    </comp>
+    <comp lib="0" loc="(1850,120)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+    </comp>
     <comp lib="0" loc="(210,350)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="IM_Data"/>
@@ -816,6 +848,10 @@ c08 840 840 840 880 880 880 d00
       <a name="output" val="true"/>
       <a name="width" val="12"/>
     </comp>
+    <comp lib="2" loc="(1630,420)" name="Multiplexer">
+      <a name="facing" val="west"/>
+      <a name="width" val="12"/>
+    </comp>
     <comp lib="5" loc="(1080,760)" name="Hex Digit Display"/>
     <comp lib="5" loc="(1090,270)" name="Button">
       <a name="label" val="Reset"/>
@@ -832,14 +868,18 @@ c08 840 840 840 880 880 880 d00
     <comp lib="5" loc="(660,760)" name="Hex Digit Display"/>
     <comp lib="5" loc="(700,760)" name="Hex Digit Display"/>
     <comp lib="5" loc="(740,760)" name="Hex Digit Display"/>
-    <comp lib="8" loc="(374,482)" name="Text">
+    <comp lib="8" loc="(370,480)" name="Text">
       <a name="text" val="Rd (0:2), Rn (5:3), Rm (8:6)"/>
     </comp>
-    <comp lib="8" loc="(621,315)" name="Text">
+    <comp lib="8" loc="(620,315)" name="Text">
       <a name="text" val="Rn = RD1, Rm = RD2"/>
     </comp>
     <comp loc="(1080,350)" name="ALU"/>
     <comp loc="(1340,370)" name="FlagsReg"/>
+    <comp loc="(1820,170)" name="twelveBitRegister">
+      <a name="label" val="PC"/>
+    </comp>
+    <comp loc="(1830,260)" name="twelveBitRCA"/>
     <comp loc="(470,140)" name="ControlUnit"/>
     <comp loc="(570,710)" name="SignExtend6"/>
     <comp loc="(790,350)" name="RegisterFile"/>
@@ -878,6 +918,8 @@ c08 840 840 840 880 880 880 d00
     <wire from="(1150,770)" to="(1160,770)"/>
     <wire from="(1160,760)" to="(1160,770)"/>
     <wire from="(1250,220)" to="(1260,220)"/>
+    <wire from="(1250,60)" to="(1250,90)"/>
+    <wire from="(1250,60)" to="(1750,60)"/>
     <wire from="(1250,90)" to="(1250,220)"/>
     <wire from="(1280,210)" to="(1350,210)"/>
     <wire from="(1310,160)" to="(1310,190)"/>
@@ -904,6 +946,60 @@ c08 840 840 840 880 880 880 d00
     <wire from="(1380,340)" to="(1400,340)"/>
     <wire from="(1380,430)" to="(1400,430)"/>
     <wire from="(1390,160)" to="(1390,170)"/>
+    <wire from="(1490,300)" to="(1490,310)"/>
+    <wire from="(1490,310)" to="(1510,310)"/>
+    <wire from="(1490,320)" to="(1490,330)"/>
+    <wire from="(1490,320)" to="(1510,320)"/>
+    <wire from="(1490,330)" to="(1490,340)"/>
+    <wire from="(1490,330)" to="(1510,330)"/>
+    <wire from="(1490,340)" to="(1490,350)"/>
+    <wire from="(1490,340)" to="(1510,340)"/>
+    <wire from="(1490,350)" to="(1490,360)"/>
+    <wire from="(1490,350)" to="(1510,350)"/>
+    <wire from="(1490,360)" to="(1490,370)"/>
+    <wire from="(1490,360)" to="(1510,360)"/>
+    <wire from="(1490,370)" to="(1490,380)"/>
+    <wire from="(1490,370)" to="(1510,370)"/>
+    <wire from="(1490,380)" to="(1490,390)"/>
+    <wire from="(1490,380)" to="(1510,380)"/>
+    <wire from="(1490,390)" to="(1490,400)"/>
+    <wire from="(1490,390)" to="(1510,390)"/>
+    <wire from="(1490,400)" to="(1490,410)"/>
+    <wire from="(1490,400)" to="(1510,400)"/>
+    <wire from="(1490,410)" to="(1490,420)"/>
+    <wire from="(1490,410)" to="(1510,410)"/>
+    <wire from="(1490,420)" to="(1490,440)"/>
+    <wire from="(1490,420)" to="(1510,420)"/>
+    <wire from="(1530,300)" to="(1610,300)"/>
+    <wire from="(1560,210)" to="(1560,420)"/>
+    <wire from="(1560,210)" to="(1600,210)"/>
+    <wire from="(1560,420)" to="(1630,420)"/>
+    <wire from="(1570,150)" to="(1570,170)"/>
+    <wire from="(1570,170)" to="(1600,170)"/>
+    <wire from="(1570,190)" to="(1600,190)"/>
+    <wire from="(1590,250)" to="(1600,250)"/>
+    <wire from="(1590,280)" to="(1590,340)"/>
+    <wire from="(1590,280)" to="(1610,280)"/>
+    <wire from="(1590,340)" to="(1850,340)"/>
+    <wire from="(1600,250)" to="(1600,260)"/>
+    <wire from="(1600,260)" to="(1610,260)"/>
+    <wire from="(1650,440)" to="(1650,460)"/>
+    <wire from="(1660,410)" to="(1830,410)"/>
+    <wire from="(1660,430)" to="(1710,430)"/>
+    <wire from="(1710,430)" to="(1710,440)"/>
+    <wire from="(1760,80)" to="(1760,100)"/>
+    <wire from="(1770,80)" to="(1770,100)"/>
+    <wire from="(1780,80)" to="(1780,100)"/>
+    <wire from="(1790,80)" to="(1790,100)"/>
+    <wire from="(1800,80)" to="(1800,100)"/>
+    <wire from="(1810,80)" to="(1810,100)"/>
+    <wire from="(1820,170)" to="(1850,170)"/>
+    <wire from="(1820,80)" to="(1820,100)"/>
+    <wire from="(1830,280)" to="(1830,410)"/>
+    <wire from="(1830,80)" to="(1830,100)"/>
+    <wire from="(1840,80)" to="(1840,100)"/>
+    <wire from="(1850,120)" to="(1850,170)"/>
+    <wire from="(1850,170)" to="(1850,340)"/>
     <wire from="(210,350)" to="(230,350)"/>
     <wire from="(230,140)" to="(230,350)"/>
     <wire from="(230,140)" to="(250,140)"/>
@@ -1163,7 +1259,7 @@ c08 840 840 840 880 880 880 d00
       <a name="selloc" val="tr"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="8" loc="(616,65)" name="Text">
+    <comp lib="8" loc="(615,65)" name="Text">
       <a name="text" val="1st tier mux determines src, 2nd tier mux determines reset"/>
     </comp>
     <comp loc="(760,170)" name="twoBitRegister">
