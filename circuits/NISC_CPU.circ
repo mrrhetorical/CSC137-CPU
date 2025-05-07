@@ -589,6 +589,29 @@ c08 840 840 840 880 880 880 d00
     <a name="circuit" val="NISC_CPU"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="256.0"/>
+    <comp lib="0" loc="(1000,490)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="NZW"/>
+      <a name="labelfont" val="SansSerif bolditalic 16"/>
+    </comp>
+    <comp lib="0" loc="(1000,520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CVW"/>
+      <a name="labelfont" val="SansSerif bolditalic 16"/>
+    </comp>
+    <comp lib="0" loc="(1000,580)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(1010,610)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Reset"/>
+    </comp>
+    <comp lib="0" loc="(1020,550)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="FlagsW"/>
+      <a name="labelfont" val="SansSerif bolditalic 16"/>
+    </comp>
     <comp lib="0" loc="(1060,160)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -597,14 +620,6 @@ c08 840 840 840 880 880 880 d00
       <a name="width" val="9"/>
     </comp>
     <comp lib="0" loc="(1090,220)" name="Clock"/>
-    <comp lib="0" loc="(1090,530)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLK"/>
-    </comp>
-    <comp lib="0" loc="(1100,560)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Reset"/>
-    </comp>
     <comp lib="0" loc="(1120,810)" name="Splitter">
       <a name="appear" val="right"/>
       <a name="bit1" val="0"/>
@@ -820,25 +835,41 @@ c08 840 840 840 880 880 880 d00
     <comp lib="8" loc="(374,482)" name="Text">
       <a name="text" val="Rd (0:2), Rn (5:3), Rm (8:6)"/>
     </comp>
+    <comp lib="8" loc="(621,315)" name="Text">
+      <a name="text" val="Rn = RD1, Rm = RD2"/>
+    </comp>
     <comp loc="(1080,350)" name="ALU"/>
     <comp loc="(1340,370)" name="FlagsReg"/>
     <comp loc="(470,140)" name="ControlUnit"/>
     <comp loc="(570,710)" name="SignExtend6"/>
     <comp loc="(790,350)" name="RegisterFile"/>
+    <wire from="(1000,490)" to="(1070,490)"/>
+    <wire from="(1000,520)" to="(1080,520)"/>
+    <wire from="(1000,580)" to="(1100,580)"/>
+    <wire from="(1010,610)" to="(1110,610)"/>
+    <wire from="(1020,550)" to="(1090,550)"/>
     <wire from="(1050,160)" to="(1060,160)"/>
     <wire from="(1050,90)" to="(1050,160)"/>
     <wire from="(1050,90)" to="(1250,90)"/>
+    <wire from="(1070,470)" to="(1070,490)"/>
+    <wire from="(1070,470)" to="(1120,470)"/>
     <wire from="(1080,370)" to="(1120,370)"/>
     <wire from="(1080,390)" to="(1120,390)"/>
     <wire from="(1080,410)" to="(1120,410)"/>
     <wire from="(1080,430)" to="(1120,430)"/>
+    <wire from="(1080,490)" to="(1080,520)"/>
+    <wire from="(1080,490)" to="(1120,490)"/>
     <wire from="(1080,760)" to="(1080,790)"/>
     <wire from="(1080,790)" to="(1130,790)"/>
     <wire from="(1090,220)" to="(1160,220)"/>
     <wire from="(1090,270)" to="(1150,270)"/>
-    <wire from="(1090,530)" to="(1120,530)"/>
-    <wire from="(1100,560)" to="(1110,560)"/>
-    <wire from="(1110,550)" to="(1110,560)"/>
+    <wire from="(1090,510)" to="(1090,550)"/>
+    <wire from="(1090,510)" to="(1120,510)"/>
+    <wire from="(1100,530)" to="(1100,580)"/>
+    <wire from="(1100,530)" to="(1120,530)"/>
+    <wire from="(1110,320)" to="(1110,450)"/>
+    <wire from="(1110,450)" to="(1120,450)"/>
+    <wire from="(1110,550)" to="(1110,610)"/>
     <wire from="(1110,550)" to="(1120,550)"/>
     <wire from="(1120,760)" to="(1120,770)"/>
     <wire from="(1120,770)" to="(1140,770)"/>
@@ -921,13 +952,16 @@ c08 840 840 840 880 880 880 d00
     <wire from="(730,770)" to="(730,790)"/>
     <wire from="(730,770)" to="(740,770)"/>
     <wire from="(740,760)" to="(740,770)"/>
-    <wire from="(790,350)" to="(860,350)"/>
+    <wire from="(790,350)" to="(840,350)"/>
     <wire from="(790,370)" to="(860,370)"/>
     <wire from="(790,390)" to="(800,390)"/>
     <wire from="(800,390)" to="(800,620)"/>
     <wire from="(800,620)" to="(800,810)"/>
     <wire from="(800,620)" to="(830,620)"/>
     <wire from="(800,810)" to="(1120,810)"/>
+    <wire from="(840,320)" to="(1110,320)"/>
+    <wire from="(840,320)" to="(840,350)"/>
+    <wire from="(840,350)" to="(860,350)"/>
   </circuit>
   <circuit name="SignExtend6">
     <a name="appearance" val="logisim_evolution"/>
