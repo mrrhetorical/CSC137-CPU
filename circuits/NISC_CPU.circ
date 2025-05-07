@@ -2226,4 +2226,10 @@ c08 840 840 840 880 880 880 d00
     <wire from="(720,150)" to="(720,170)"/>
     <wire from="(720,190)" to="(720,300)"/>
   </circuit>
+  <circuit name="instructionFetchUnit">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="instructionFetchUnit"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="256.0"/>
+  </circuit>
 </project>
