@@ -1,0 +1,9 @@
+MOVC R1 1
+MOVC R0 -16
+ASR R0 R0
+ASR R0 R0
+
+# Expect 0xFFC in R0 (-4)
+
+HALT:
+BNZ HALT

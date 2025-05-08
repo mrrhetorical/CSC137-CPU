@@ -1,0 +1,9 @@
+MOVC R1 1
+MOVC R0 16
+LSR R0 R0
+LSR R0 R0
+
+# Expect 0x4 in R0
+
+HALT:
+BNZ HALT

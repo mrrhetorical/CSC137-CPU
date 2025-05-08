@@ -136,8 +136,8 @@
       <a name="addrWidth" val="9"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 9 12
-c08 c51 c0a 0 289 e03 c0f 5ff
-e06
+c00 0 940 c23 21b e0a c08 c07
+83f e0b c00 e0b
 </a>
       <a name="dataWidth" val="12"/>
       <a name="label" val="IM"/>
@@ -1328,7 +1328,7 @@ e06
     </comp>
     <comp lib="0" loc="(290,880)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="FlagsW"/>
+      <a name="label" val="MOVF"/>
       <a name="labelfont" val="SansSerif bolditalic 16"/>
     </comp>
     <comp lib="0" loc="(300,350)" name="Splitter">
@@ -1488,7 +1488,7 @@ e06
     <comp lib="8" loc="(370,480)" name="Text">
       <a name="text" val="Rd (0:2), Rn (5:3), Rm (8:6)"/>
     </comp>
-    <comp lib="8" loc="(375,935)" name="Text">
+    <comp lib="8" loc="(435,935)" name="Text">
       <a name="text" val="This is the &quot;write source&quot; for the register. Bit 0 is set when constant, bit 1 is set when flags. See mux left of reg file"/>
     </comp>
     <comp lib="8" loc="(620,315)" name="Text">
