@@ -711,7 +711,7 @@ c08 840 840 840 880 880 880 d00
       <a name="facing" val="east"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="0" loc="(1590,250)" name="Ground">
+    <comp lib="0" loc="(1600,260)" name="Ground">
       <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(1650,460)" name="Tunnel">
@@ -730,6 +730,11 @@ c08 840 840 840 880 880 880 d00
       <a name="facing" val="north"/>
       <a name="fanout" val="12"/>
       <a name="incoming" val="12"/>
+    </comp>
+    <comp lib="0" loc="(1910,410)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x1ff"/>
+      <a name="width" val="12"/>
     </comp>
     <comp lib="0" loc="(210,350)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -848,6 +853,10 @@ c08 840 840 840 880 880 880 d00
       <a name="output" val="true"/>
       <a name="width" val="12"/>
     </comp>
+    <comp lib="1" loc="(1890,480)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="width" val="12"/>
+    </comp>
     <comp lib="2" loc="(1630,420)" name="Multiplexer">
       <a name="facing" val="west"/>
       <a name="width" val="12"/>
@@ -868,6 +877,12 @@ c08 840 840 840 880 880 880 d00
     <comp lib="5" loc="(660,760)" name="Hex Digit Display"/>
     <comp lib="5" loc="(700,760)" name="Hex Digit Display"/>
     <comp lib="5" loc="(740,760)" name="Hex Digit Display"/>
+    <comp lib="8" loc="(1747,541)" name="Text">
+      <a name="text" val="This is a mask for the lower 9 bits. Allows reuse of 12-bit circuitry"/>
+    </comp>
+    <comp lib="8" loc="(1754,568)" name="Text">
+      <a name="text" val="(Overflow after 9th bit)"/>
+    </comp>
     <comp lib="8" loc="(370,480)" name="Text">
       <a name="text" val="Rd (0:2), Rn (5:3), Rm (8:6)"/>
     </comp>
@@ -977,14 +992,12 @@ c08 840 840 840 880 880 880 d00
     <wire from="(1570,150)" to="(1570,170)"/>
     <wire from="(1570,170)" to="(1600,170)"/>
     <wire from="(1570,190)" to="(1600,190)"/>
-    <wire from="(1590,250)" to="(1600,250)"/>
     <wire from="(1590,280)" to="(1590,340)"/>
     <wire from="(1590,280)" to="(1610,280)"/>
     <wire from="(1590,340)" to="(1850,340)"/>
-    <wire from="(1600,250)" to="(1600,260)"/>
     <wire from="(1600,260)" to="(1610,260)"/>
     <wire from="(1650,440)" to="(1650,460)"/>
-    <wire from="(1660,410)" to="(1830,410)"/>
+    <wire from="(1660,410)" to="(1840,410)"/>
     <wire from="(1660,430)" to="(1710,430)"/>
     <wire from="(1710,430)" to="(1710,440)"/>
     <wire from="(1760,80)" to="(1760,100)"/>
@@ -995,11 +1008,17 @@ c08 840 840 840 880 880 880 d00
     <wire from="(1810,80)" to="(1810,100)"/>
     <wire from="(1820,170)" to="(1850,170)"/>
     <wire from="(1820,80)" to="(1820,100)"/>
-    <wire from="(1830,280)" to="(1830,410)"/>
+    <wire from="(1830,280)" to="(1830,390)"/>
+    <wire from="(1830,390)" to="(1870,390)"/>
     <wire from="(1830,80)" to="(1830,100)"/>
+    <wire from="(1840,410)" to="(1840,500)"/>
+    <wire from="(1840,500)" to="(1890,500)"/>
     <wire from="(1840,80)" to="(1840,100)"/>
     <wire from="(1850,120)" to="(1850,170)"/>
     <wire from="(1850,170)" to="(1850,340)"/>
+    <wire from="(1870,390)" to="(1870,430)"/>
+    <wire from="(1890,480)" to="(1890,500)"/>
+    <wire from="(1910,410)" to="(1910,430)"/>
     <wire from="(210,350)" to="(230,350)"/>
     <wire from="(230,140)" to="(230,350)"/>
     <wire from="(230,140)" to="(250,140)"/>
