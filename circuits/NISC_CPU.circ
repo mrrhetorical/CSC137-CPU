@@ -136,8 +136,7 @@
       <a name="addrWidth" val="9"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 9 12
-c58 801 c0a 89 b e0a c08 c0f
-5ff e09 c00 c0f 5ff e07
+c20 900 e06 c0f 5ff e05 c08 e03
 </a>
       <a name="dataWidth" val="12"/>
       <a name="label" val="IM"/>
@@ -1917,8 +1916,12 @@ c58 801 c0a 89 b e0a c08 c0f
       <a name="fanout" val="12"/>
       <a name="incoming" val="12"/>
     </comp>
-    <comp lib="1" loc="(380,350)" name="OR Gate"/>
-    <comp lib="1" loc="(380,410)" name="OR Gate"/>
+    <comp lib="1" loc="(380,350)" name="OR Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(380,410)" name="OR Gate">
+      <a name="inputs" val="3"/>
+    </comp>
     <comp lib="2" loc="(300,180)" name="Multiplexer">
       <a name="width" val="2"/>
     </comp>
@@ -1964,8 +1967,12 @@ c58 801 c0a 89 b e0a c08 c0f
     <wire from="(260,190)" to="(270,190)"/>
     <wire from="(260,70)" to="(260,190)"/>
     <wire from="(280,200)" to="(280,290)"/>
-    <wire from="(280,290)" to="(280,650)"/>
+    <wire from="(280,290)" to="(280,350)"/>
     <wire from="(280,290)" to="(320,290)"/>
+    <wire from="(280,350)" to="(280,410)"/>
+    <wire from="(280,350)" to="(330,350)"/>
+    <wire from="(280,410)" to="(280,650)"/>
+    <wire from="(280,410)" to="(330,410)"/>
     <wire from="(300,180)" to="(370,180)"/>
     <wire from="(320,270)" to="(320,290)"/>
     <wire from="(320,330)" to="(320,390)"/>
@@ -2619,7 +2626,7 @@ c58 801 c0a 89 b e0a c08 c0f
       <a name="radix" val="10signed"/>
       <a name="width" val="12"/>
     </comp>
-    <comp lib="0" loc="(1600,540)" name="Pin">
+    <comp lib="0" loc="(1800,540)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Cout"/>
@@ -2767,7 +2774,7 @@ c58 801 c0a 89 b e0a c08 c0f
     <wire from="(150,530)" to="(150,870)"/>
     <wire from="(150,530)" to="(360,530)"/>
     <wire from="(1560,640)" to="(1560,840)"/>
-    <wire from="(1570,540)" to="(1600,540)"/>
+    <wire from="(1570,540)" to="(1800,540)"/>
     <wire from="(1570,560)" to="(1580,560)"/>
     <wire from="(1570,640)" to="(1570,830)"/>
     <wire from="(1580,560)" to="(1580,620)"/>
