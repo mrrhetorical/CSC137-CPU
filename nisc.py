@@ -74,6 +74,20 @@ def encode(instr, labels, pc):
         target = parts[1]
         bta = int(target) if target.isdigit() else labels[target.upper()]
         return (7 << 9) | bta
+    elif mnemonic == "MOV":
+        # MOV Rd, Rsrc using the OR method
+        rd = REGS[parts[1]]
+        rsrc = REGS[parts[2]]
+        
+        # First instruction: Set Rd to 0
+        # This is needed to clear the target register before OR-ing
+        first_instr = (OPCODES["MOVC"] << 9) | (0 << 3) | rd  # Set Rd to 0
+        
+        # Second instruction: OR Rd, Rsrc, R0
+        second_instr = (OPCODES["OR"] << 9) | (rsrc << 6) | (0 << 3) | rd
+        
+        # Return both instructions as a tuple
+        return (first_instr, second_instr)
 
     raise ValueError(f"Unknown instruction: {mnemonic}")
 
@@ -83,7 +97,11 @@ def passTwo(cleaned, labels):
         try:
             code = encode(instr, labels, pc)
             if code is not None:
-                yield f"{code:03x}"
+                if isinstance(code, tuple):  # In case we get a tuple of instructions (like MOV)
+                    for c in code:
+                        yield f"{c:03x}"
+                else: 
+                    yield f"{code:03x}"
         except Exception as e:
             raise RuntimeError(f"Error on line {lineno + 1}: {instr}\n{e}")
 

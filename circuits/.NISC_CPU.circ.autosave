@@ -136,8 +136,7 @@
       <a name="addrWidth" val="9"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 9 12
-c08 c51 c0a 0 289 e03 c0f 5ff
-e06
+c88 dd9 c00 640
 </a>
       <a name="dataWidth" val="12"/>
       <a name="label" val="IM"/>
