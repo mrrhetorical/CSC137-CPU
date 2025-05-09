@@ -136,7 +136,7 @@
       <a name="addrWidth" val="9"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 9 12
-c20 900 e06 c0f 5ff e05 c08 e03
+0
 </a>
       <a name="dataWidth" val="12"/>
       <a name="label" val="IM"/>
@@ -2188,6 +2188,9 @@ c20 900 e06 c0f 5ff e05 c08 e03
     <comp lib="1" loc="(760,310)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
+    <comp lib="1" loc="(760,390)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
     <comp lib="1" loc="(810,320)" name="NOR Gate">
       <a name="size" val="30"/>
     </comp>
@@ -2232,6 +2235,8 @@ c20 900 e06 c0f 5ff e05 c08 e03
     <wire from="(1090,610)" to="(1150,610)"/>
     <wire from="(1100,280)" to="(1100,290)"/>
     <wire from="(1100,290)" to="(1200,290)"/>
+    <wire from="(1100,380)" to="(1100,390)"/>
+    <wire from="(1100,380)" to="(1200,380)"/>
     <wire from="(1120,570)" to="(1120,590)"/>
     <wire from="(1120,590)" to="(1150,590)"/>
     <wire from="(1160,460)" to="(1200,460)"/>
@@ -2259,7 +2264,9 @@ c20 900 e06 c0f 5ff e05 c08 e03
     <wire from="(550,270)" to="(940,270)"/>
     <wire from="(550,300)" to="(550,340)"/>
     <wire from="(550,300)" to="(730,300)"/>
+    <wire from="(550,340)" to="(550,400)"/>
     <wire from="(550,340)" to="(850,340)"/>
+    <wire from="(550,400)" to="(730,400)"/>
     <wire from="(570,180)" to="(570,260)"/>
     <wire from="(570,260)" to="(1200,260)"/>
     <wire from="(570,260)" to="(570,410)"/>
@@ -2276,12 +2283,13 @@ c20 900 e06 c0f 5ff e05 c08 e03
     <wire from="(700,320)" to="(730,320)"/>
     <wire from="(700,350)" to="(700,380)"/>
     <wire from="(700,350)" to="(800,350)"/>
-    <wire from="(700,380)" to="(1200,380)"/>
+    <wire from="(700,380)" to="(730,380)"/>
     <wire from="(710,180)" to="(710,290)"/>
     <wire from="(710,290)" to="(710,370)"/>
     <wire from="(710,290)" to="(940,290)"/>
     <wire from="(710,370)" to="(800,370)"/>
     <wire from="(760,310)" to="(770,310)"/>
+    <wire from="(760,390)" to="(1100,390)"/>
     <wire from="(810,320)" to="(1200,320)"/>
     <wire from="(830,360)" to="(850,360)"/>
     <wire from="(880,350)" to="(880,400)"/>
